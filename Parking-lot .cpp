@@ -6,24 +6,24 @@ using namespace std;
 void User()
 {
 	cout << "**************************" << endl;
-	cout << "*****3.²éÑ¯¸öÈË×ÊÁÏ  *****" << endl;
-	cout << "*****4.²éÑ¯³µÁ¾×ÊÁÏ  *****" << endl;
-	cout << "*****6.Ôö¼Ó³µÁ¾      *****" << endl;
-	cout << "*****7.É¾³ý³µÁ¾      *****" << endl;
-	cout << "*****8.½øÈëÍ£³µ³¡    *****" << endl;
-	cout << "*****9.Àë¿ªÍ£³µ³¡    *****" << endl;
-	cout << "*****0.ÍË³öÏµÍ³      *****" << endl;
+	cout << "*****3.æŸ¥è¯¢ä¸ªäººèµ„æ–™  *****" << endl;
+	cout << "*****4.æŸ¥è¯¢è½¦è¾†èµ„æ–™  *****" << endl;
+	cout << "*****6.å¢žåŠ è½¦è¾†      *****" << endl;
+	cout << "*****7.åˆ é™¤è½¦è¾†      *****" << endl;
+	cout << "*****8.è¿›å…¥åœè½¦åœº    *****" << endl;
+	cout << "*****9.ç¦»å¼€åœè½¦åœº    *****" << endl;
+	cout << "*****0.é€€å‡ºç³»ç»Ÿ      *****" << endl;
 	cout << "**************************" << endl;
 }
 
 void Manage()
 {
 	cout << "*************************************" << endl;
-	cout << "*****3.²éÑ¯Ê£Óà³µÎ»             *****" << endl;
-	cout << "*****4.²éÑ¯ÔÚÍ£³µÁ¾¼°Æä³µÖ÷ÐÅÏ¢ *****" << endl;
-	cout << "*****5.×¼Ðí½øÈë                 *****" << endl;
-	cout << "*****6.×¼ÐíÀë¿ª                 *****" << endl;
-	cout << "*****0.ÍË³öÏµÍ³                 *****" << endl;
+	cout << "*****3.æŸ¥è¯¢å‰©ä½™è½¦ä½             *****" << endl;
+	cout << "*****4.æŸ¥è¯¢åœ¨åœè½¦è¾†åŠå…¶è½¦ä¸»ä¿¡æ¯ *****" << endl;
+	cout << "*****5.å‡†è®¸è¿›å…¥                 *****" << endl;
+	cout << "*****6.å‡†è®¸ç¦»å¼€                 *****" << endl;
+	cout << "*****0.é€€å‡ºç³»ç»Ÿ                 *****" << endl;
 	cout << "*************************************" << endl;
 }
 
@@ -68,10 +68,10 @@ public:
 void findPerson(AddressCar* abs,ParkingLot* abt)
 {
 	system("cls");
-	cout << "Ãû×Ö£º" << "²ÝÏó" << "\t";
-	cout << "ÄêÁä£º" << "18" << "\t";
-	cout << "ÓµÓÐ" << abs->size << "Á¾³µ" << "\t";
-	cout << "ÒÑ½É·Ñ" << abt->b->n * 30 << "Ôª" << endl;
+	cout << "åå­—ï¼š" << "è‰è±¡" << "\t";
+	cout << "å¹´é¾„ï¼š" << "18" << "\t";
+	cout << "æ‹¥æœ‰" << abs->size << "è¾†è½¦" << "\t";
+	cout << "å·²ç¼´è´¹" << abt->b->n * 30 << "å…ƒ" << endl;
 	system("pause");
 	system("cls");
 }
@@ -81,14 +81,14 @@ void AddCar(AddressCar* abs)
 	system("cls");
 	string licensePlate1;
 	string color;
-	cout << "ÇëÊäÈëÄúÒªÌí¼Ó³µÁ¾µÄ³µÅÆºÅÂë£º";
+	cout << "è¯·è¾“å…¥æ‚¨è¦æ·»åŠ è½¦è¾†çš„è½¦ç‰Œå·ç ï¼š";
 	cin >> licensePlate1;
 	abs->a[abs->size].licensePlate = licensePlate1;
-	cout << "ÇëÊäÈëÄúÒªÌí¼ÓµÄ³µÁ¾µÄÑÕÉ«£º";
+	cout << "è¯·è¾“å…¥æ‚¨è¦æ·»åŠ çš„è½¦è¾†çš„é¢œè‰²ï¼š";
 	cin >> color;
 	abs->a[abs->size].color = color;
 	abs->size++;
-	cout << "ÄúÒÑÌí¼Ó³É¹¦£¡" << endl;
+	cout << "æ‚¨å·²æ·»åŠ æˆåŠŸï¼" << endl;
 	system("pause");
 	system("cls");
 }
@@ -110,12 +110,12 @@ int isExist(AddressCar* abs)
 void findCar(AddressCar* abs,ParkingLot* abt)
 {
 	system("cls");
-	cout << "ÄúÒ»¹²ÓÐ" << abs->size << "Á¾³µ" << endl;
+	cout << "æ‚¨ä¸€å…±æœ‰" << abs->size << "è¾†è½¦" << endl;
 	for (int i = 0; i <abs->size; i++)
 	{
-		cout << "³µÅÆºÅ£º" << abs->a[i].licensePlate << "\t"
-			<< "ÑÕÉ«£º" << abs->a[i].color << "\t" << "½øÈëÊ±¼ä£º" << abt->b[i].time3 << "\t";
-		cout << "Àë¿ªÊ±¼ä£º" << abt->b[i+1].time3 << endl;
+		cout << "è½¦ç‰Œå·ï¼š" << abs->a[i].licensePlate << "\t"
+			<< "é¢œè‰²ï¼š" << abs->a[i].color << "\t" << "è¿›å…¥æ—¶é—´ï¼š" << abt->b[i].time3 << "\t";
+		cout << "ç¦»å¼€æ—¶é—´ï¼š" << abt->b[i+1].time3 << endl;
 
 	}
 
@@ -123,7 +123,7 @@ void findCar(AddressCar* abs,ParkingLot* abt)
 	//struct tm* p;
 	//time(&nowtime);
 	//p = localtime(&nowtime);
-	//printf("½øÈëÊ±¼ä£º%02d:%02d:%02d\n", p->tm_hour, p->tm_min);
+	//printf("è¿›å…¥æ—¶é—´ï¼š%02d:%02d:%02d\n", p->tm_hour, p->tm_min);
 
 	system("pause");
 	system("cls");
@@ -131,7 +131,7 @@ void findCar(AddressCar* abs,ParkingLot* abt)
 
 void DeleteCar(AddressCar* abs)
 {
-	cout << "ÇëÊäÈëÄúÏëÒªÉ¾³ýµÄ³µÁ¾µÄ³µÅÆºÅ£º" << endl;
+	cout << "è¯·è¾“å…¥æ‚¨æƒ³è¦åˆ é™¤çš„è½¦è¾†çš„è½¦ç‰Œå·ï¼š" << endl;
 	int i = isExist(abs);
 	if (i != -1)
 	{
@@ -140,11 +140,11 @@ void DeleteCar(AddressCar* abs)
 			abs->a[i] = abs->a[i + 1];
 		}
 		abs->size--;
-		cout << "É¾³ý³É¹¦" << endl;
+		cout << "åˆ é™¤æˆåŠŸ" << endl;
 	}
 	else
 	{
-		cout << "Î´ÕÒµ½ÕâÁ¾³µ" << endl;
+		cout << "æœªæ‰¾åˆ°è¿™è¾†è½¦" << endl;
 	}
 	system("pause");
 	system("cls");
@@ -155,28 +155,28 @@ void Enter(AddressCar* abs, ParkingLot* abt)
 	int time1;
 	system("cls");
 	string color;
-	cout << "»¶Ó­Í£³µ£¡" << endl;
+	cout << "æ¬¢è¿Žåœè½¦ï¼" << endl;
 	if (abt->size1 == 100)
 	{
-		cout << "¶Ô²»Æð£¬Í£³µ³¡³µÎ»ÒÑÂú£¡" << endl;
+		cout << "å¯¹ä¸èµ·ï¼Œåœè½¦åœºè½¦ä½å·²æ»¡ï¼" << endl;
 	}
 	else
 	{
-		//³µÅÆ
-		cout << "ÇëÊäÈë³µÅÆºÅ£º";
+		//è½¦ç‰Œ
+		cout << "è¯·è¾“å…¥è½¦ç‰Œå·ï¼š";
 		int ret = isExist(abs);
 		if (ret != -1)
 		{
-			//½øÈëÊ±¼ä
+			//è¿›å…¥æ—¶é—´
 			string time3;
-			cout << "ÇëÊäÈëÄúµÄ½øÈëÊ±¼ä£º";
+			cout << "è¯·è¾“å…¥æ‚¨çš„è¿›å…¥æ—¶é—´ï¼š";
 			cin >> time3;
 			abt->b[abt->size1].time3 = time3;
 			abt->size1++;
 		}
 		else
 		{
-			cout << "Î´ÕÒµ½´Ë³µÁ¾ÐÅÏ¢£¬ÇëÏÈÌí¼Ó³µÁ¾ÔÙÍ£³µ£¡" << endl;
+			cout << "æœªæ‰¾åˆ°æ­¤è½¦è¾†ä¿¡æ¯ï¼Œè¯·å…ˆæ·»åŠ è½¦è¾†å†åœè½¦ï¼" << endl;
 		}
 		system("pause");
 		system("cls");
@@ -187,22 +187,22 @@ void Leave(AddressCar* abs, ParkingLot* abt)
 {
 	system("cls");
 	string licensePlate1;
-	cout << "ÇëÊäÈëÄúÒªÀë¿ªÍ£³µ³¡³µÁ¾µÄ³µÅÆºÅÂë£º" ;
+	cout << "è¯·è¾“å…¥æ‚¨è¦ç¦»å¼€åœè½¦åœºè½¦è¾†çš„è½¦ç‰Œå·ç ï¼š" ;
 	int ret = isExist(abs);
 	if (ret != -1)
 	{
 		string time4;
-		cout << "ÇëÊäÈëÄúµÄÀë¿ªÊ±¼ä£º";
+		cout << "è¯·è¾“å…¥æ‚¨çš„ç¦»å¼€æ—¶é—´ï¼š";
 		cin >> time4;
 		abt->b[abt->size1].time3 = time4;
-		cout << "Ò»Â·Ë³·ç£¡ \t";
-		cout << "ÄúÐèÒª½ÉÄÉµÄ·ÑÓÃÊÇ£º30Ôª" << endl;
+		cout << "ä¸€è·¯é¡ºé£Žï¼ \t";
+		cout << "æ‚¨éœ€è¦ç¼´çº³çš„è´¹ç”¨æ˜¯ï¼š30å…ƒ" << endl;
 		abt->size1--;
 		abt->b->n++;
 	}
 	else
 	{
-		cout << "Î´ÔÚÍ£³µ³¡ÖÐÕÒµ½¸Ã³µÁ¾ÐÅÏ¢£¡" << endl;
+		cout << "æœªåœ¨åœè½¦åœºä¸­æ‰¾åˆ°è¯¥è½¦è¾†ä¿¡æ¯ï¼" << endl;
 	}
 	system("pause");
 	system("cls");
@@ -211,7 +211,7 @@ void Leave(AddressCar* abs, ParkingLot* abt)
 void Left(ParkingLot* abt)
 {
 	system("cls");
-	cout << "µ±Ç°Í£³µ³¡»¹Ê£ÏÂ " << 100-abt->size1 << "¸ö³µÎ»£¡" << endl;
+	cout << "å½“å‰åœè½¦åœºè¿˜å‰©ä¸‹ " << 100-abt->size1 << "ä¸ªè½¦ä½ï¼" << endl;
 	system("pause");
 	system("cls");
 }
@@ -219,13 +219,13 @@ void Left(ParkingLot* abt)
 void FindAll(AddressCar* abs,ParkingLot* abt)
 {
 	system("cls");
-	cout << "Ä¿Ç°ÔÚÍ£³µÁ¾¼°Æä³µÖ÷ÐÅÏ¢Îª£º" << endl;
+	cout << "ç›®å‰åœ¨åœè½¦è¾†åŠå…¶è½¦ä¸»ä¿¡æ¯ä¸ºï¼š" << endl;
 	for (int i = 0; i < abt->size1; i++)
 	{
-		cout << "³µÖ÷£º" << abs->a[abs->size].name << "\t";
-		cout << "ÄêÁä£º" << abs->a[abs->size].age << "\t";
-		cout << "³µÅÆºÅ£º" << abs->a[abs->size].licensePlate << "\t";
-		cout << "³µÁ¾ÑÕÉ«£º" << abs->a[abs->size].color << endl;
+		cout << "è½¦ä¸»ï¼š" << abs->a[abs->size].name << "\t";
+		cout << "å¹´é¾„ï¼š" << abs->a[abs->size].age << "\t";
+		cout << "è½¦ç‰Œå·ï¼š" << abs->a[abs->size].licensePlate << "\t";
+		cout << "è½¦è¾†é¢œè‰²ï¼š" << abs->a[abs->size].color << endl;
 	}
 	system("pause");
 	system("cls");
@@ -234,7 +234,7 @@ void FindAll(AddressCar* abs,ParkingLot* abt)
 void allowEnter(ParkingLot* abt)
 {
 	system("cls");
-	cout << "×¼Ðí½øÈë£¡" << endl;
+	cout << "å‡†è®¸è¿›å…¥ï¼" << endl;
 	system("pause");
 	system("cls");
 }
@@ -242,7 +242,7 @@ void allowEnter(ParkingLot* abt)
 void allowLeave(ParkingLot* abt)
 {
 	system("cls");
-	cout << "×¼ÐíÀë¿ª£¡" << endl;
+	cout << "å‡†è®¸ç¦»å¼€ï¼" << endl;
 	system("pause");
 	system("cls");
 }
@@ -260,14 +260,14 @@ void Login()
 	abs.size = 0;
 	while (true)
 	{
-		cout << "»¶Ó­½øÈëÍ£³µ³¡¹ÜÀíÏµÍ³£¡" << endl;
-		cout << "ÇëÊäÈëÕËºÅ£º";
+		cout << "æ¬¢è¿Žè¿›å…¥åœè½¦åœºç®¡ç†ç³»ç»Ÿï¼" << endl;
+		cout << "è¯·è¾“å…¥è´¦å·ï¼š";
 		cin >> ID;
-		cout << "ÇëÊäÈëÃÜÂë£º";
+		cout << "è¯·è¾“å…¥å¯†ç ï¼š";
 		cin >> Password;
 		if (ID == ID1 && Password == Password1)
 		{
-			cout << "»¶Ó­½øÈëÍ£³µ³¡ÓÃ»§¹ÜÀíÏµÍ³£¡" << endl;
+			cout << "æ¬¢è¿Žè¿›å…¥åœè½¦åœºç”¨æˆ·ç®¡ç†ç³»ç»Ÿï¼" << endl;
 			system("pause");
 			system("cls");
 			while (true)
@@ -310,7 +310,7 @@ void Login()
 		}
 		if (ID == ID2 && Password == Password2)
 		{
-			cout << "»¶Ó­½øÈëÍ£³µ³¡¹ÜÀíÔ±¹ÜÀíÏµÍ³£¡" << endl;
+			cout << "æ¬¢è¿Žè¿›å…¥åœè½¦åœºç®¡ç†å‘˜ç®¡ç†ç³»ç»Ÿï¼" << endl;
 			system("pause");
 			system("cls");
 			while (true)
@@ -341,7 +341,7 @@ void Login()
 		}
 		else
 		{
-			cout << "ÕËºÅ»òÃÜÂë´íÎó£¡\t ÇëÖØÐÂÊäÈë" << endl;
+			cout << "è´¦å·æˆ–å¯†ç é”™è¯¯ï¼\t è¯·é‡æ–°è¾“å…¥" << endl;
 			system("pause");
 			system("cls");
 		}
